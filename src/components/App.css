@@ -1,0 +1,5 @@
+#calc-area {
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+}
