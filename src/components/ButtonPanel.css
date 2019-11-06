@@ -1,0 +1,9 @@
+#panel {
+  display: flex;
+  flex-direction: column;
+}
+#panel .group {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+}
