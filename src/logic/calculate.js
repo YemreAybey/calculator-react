@@ -1,7 +1,9 @@
+import operate from './operate';
+
 const calculate = ({ total, next, operation }, btnName) => {
   switch (btnName) {
     case '+/-':
-      if (next == '') {
+      if (next === '') {
         total *= -1;
       } else {
         next *= -1;
@@ -19,7 +21,7 @@ const calculate = ({ total, next, operation }, btnName) => {
       }
       break;
     case '.':
-      if (next == '') {
+      if (next === '') {
         if (!total.includes('.')) {
           total += '.';
         }
