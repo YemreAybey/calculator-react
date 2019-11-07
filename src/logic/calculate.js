@@ -8,36 +8,39 @@ const calculate = ({ total, next, operation }, btnName) => {
       } else {
         next *= -1;
       }
-      break;
+      return { total, next };
     case 'AC':
       total = '';
       next = '';
-      break;
+      operation = null;
+      return { total, next, operation };
     case '%':
       if (next === '') {
         total = operate(total, null, btnName);
+        return { total };
       } else {
         next = operate(next, null, btnName);
+        return { next };
       }
-      break;
     case '.':
       if (next === '') {
         if (!total.includes('.')) {
           total += '.';
+          return { total };
         }
       } else {
         if (!next.includes('.')) {
           next += '.';
+          return { next };
         }
       }
-      break;
     case '=':
       if (operation !== '') {
         total = (total, next, operation);
         next = '';
         operation = '';
+        return { total, next, operation };
       }
-      break;
     case '+':
     case '-':
     case 'x':
@@ -51,14 +54,14 @@ const calculate = ({ total, next, operation }, btnName) => {
         total = next;
         next = '';
       }
-      break;
+      return { total, next, operation };
     default:
       if (next === '') {
         next = btnName;
       } else {
         next += btnName;
       }
-      break;
+      return { next };
   }
 };
 
