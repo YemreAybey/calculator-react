@@ -36,7 +36,7 @@ const calculate = ({ total, next, operation }, btnName) => {
       }
       break;
     case '=':
-      if (operation) {
+      if (operation && total && next) {
         total = operate(total, next, operation);
         next = '';
         operation = '';
@@ -47,7 +47,7 @@ const calculate = ({ total, next, operation }, btnName) => {
     case 'x':
     case '÷':
       total = total === 'INFINITY' ? '0' : total;
-      if (operation) {
+      if (operation && total && next) {
         total = operate(total, next, operation);
         next = '';
         operation = btnName;
