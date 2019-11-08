@@ -17,6 +17,8 @@ const operate = (n1, n2, op) => {
       return n1.div(n2).toString();
     case '%':
       return n1.div(100).toString();
+    default:
+      break;
   }
 };
 
