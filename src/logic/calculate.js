@@ -52,20 +52,23 @@ const calculate = ({ total, next, operation }, btnName) => {
         next = '';
         operation = btnName;
       } else {
-        operation = btnName;
         if (!total) {
           total = next;
         }
+        operation = btnName;
         next = '';
       }
       return { total, next, operation };
     default:
+      if (!operation && total) {
+        total = '';
+      }
       if (!next) {
         next = btnName;
       } else {
         next += btnName;
       }
-      return { next };
+      return { total, next };
   }
 };
 
