@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = props => {
+  const handleClick = btnName => {
+    return props.clickHandler(btnName);
+  };
   return (
     <div
       className="button"
@@ -10,6 +13,7 @@ const Button = props => {
         width: `${decideWidth(props.width)}`,
         backgroundColor: `${props.color}`
       }}
+      onClick={() => handleClick(props.name)}
     >
       {props.name}
     </div>

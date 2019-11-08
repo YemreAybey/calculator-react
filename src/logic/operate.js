@@ -1,8 +1,12 @@
-import Big from './big.mjs';
+import Big from 'big.js';
 
 const operate = (n1, n2, op) => {
-  n1 = Big(n1);
-  n2 = Big(n2);
+  if (n1) {
+    n1 = Big(n1);
+  }
+  if (n2) {
+    n2 = Big(n2);
+  }
   switch (op) {
     case '+':
       return n1.plus(n2).toString();
@@ -11,7 +15,7 @@ const operate = (n1, n2, op) => {
     case 'x':
       return n1.times(n2).toString();
     case '÷':
-      if (n2 === 0) {
+      if (n2.toString() === '0') {
         return 'INFINITY';
       }
       return n1.div(n2).toString();
