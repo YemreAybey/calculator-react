@@ -1,17 +1,14 @@
 <h1 align="center">REACT BASIC CALCULATOR 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/ebukaume/todo-list#readme" target="_blank">
+  <a href="https://github.com/YemreAybey/calculator-react#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/ebukaume/todo-list/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/YemreAybey/calculator-react/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/ebukaume/todo-list/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/YemreAybey/calculator-react/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/ebukaume/todo-list" />
-  </a>
-  <a href="https://twitter.com/ebukaume" target="_blank">
-    <img alt="Twitter: ebukaume" src="https://img.shields.io/twitter/follow/ebukaume.svg?style=social" />
   </a>
 </p>
 
