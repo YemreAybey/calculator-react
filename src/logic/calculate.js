@@ -4,18 +4,18 @@ const calculate = ({ total, next, operation }, btnName) => {
   switch (btnName) {
     case '+/-':
       if (next === '') {
-        total *= -1;
+        total = (total * -1).toString();
       } else {
-        next *= -1;
+        next = (next * -1).toString();
       }
       return { total, next };
     case 'AC':
       total = '';
       next = '';
-      operation = null;
+      operation = '';
       return { total, next, operation };
     case '%':
-      if (next === '') {
+      if (!next) {
         total = operate(total, null, btnName);
         return { total };
       } else {
@@ -23,7 +23,7 @@ const calculate = ({ total, next, operation }, btnName) => {
         return { next };
       }
     case '.':
-      if (next === '') {
+      if (!next) {
         if (!total.includes('.')) {
           total += '.';
           return { total };
@@ -36,35 +36,39 @@ const calculate = ({ total, next, operation }, btnName) => {
       }
       break;
     case '=':
-      if (operation !== '') {
+      if (operation && total && next) {
         total = operate(total, next, operation);
         next = '';
         operation = '';
-        return { total, next, operation };
       }
-      break;
+      return { total, next, operation };
     case '+':
     case '-':
     case 'x':
     case '÷':
       total = total === 'INFINITY' ? '0' : total;
-      if (operation !== '') {
+      if (operation && total && next) {
         total = operate(total, next, operation);
         next = '';
         operation = btnName;
       } else {
+        if (!total) {
+          total = next;
+        }
         operation = btnName;
-        total = next;
         next = '';
       }
       return { total, next, operation };
     default:
-      if (next === '') {
+      if (!operation && total) {
+        total = '';
+      }
+      if (!next) {
         next = btnName;
       } else {
         next += btnName;
       }
-      return { next };
+      return { total, next };
   }
 };
 
