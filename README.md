@@ -8,10 +8,15 @@
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
 </p>
+<p align="center">
+  <a href="https://calc-react-yem.herokuapp.com/" target="_blank">
+    <img alt="Demo" src="https://res.cloudinary.com/yemreaybey/image/upload/v1578665396/Portfolio/calculator-react_t23igz.png" />
+  </a>
+</p>
 
 <br>
 
-This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ 'The Global School for Remote Software Developers!').
+This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 
 In this project, I worked on a project for a fictional company that requires my help building a **Basic Calculator** using react. The project has been split into multiple milestones, and each milestone has functional and technical requirements I must meet.
 
